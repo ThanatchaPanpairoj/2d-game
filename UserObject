@@ -1,7 +1,7 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.Color;
-import java.awt.geom.arc2D;
+
 /**
  * Describes user object.
  *
@@ -13,7 +13,7 @@ public class UserObject
     private double xLeft;
     private double yTop;
     private Color color;
-    private int hp, maxHp, radius, level, xp;
+    private int hp, maxHp, stamina, maxStamina, radius, level, xp;
 
     /**
     Constructs an user object with a given center.
@@ -23,8 +23,10 @@ public class UserObject
     public UserObject(int radius, int x, int y, Color color)
     {
         this.radius = radius;
-        hp = 6;
-        maxHp = 6;
+        hp = 5;
+        maxHp = 5;
+        stamina = 180;
+        maxStamina = 180;
         xLeft = x;
         yTop = y;
         level = 1;
@@ -44,16 +46,6 @@ public class UserObject
 
         g2.setPaint(color);
         g2.fill(circle);
-        
-//         Line2D.Double segment=new Line2D.Double(xLeft-radius/2, yTop-radius/2, xLeft-radius/2+5, yTop-radius/2);
-//         Line2D.Double segment2=new Line2D.Double(xLeft+radius/2, yTop-radius/2, xLeft+radius/2-5, yTop-radius/2);
-        
-        g2.setColor(Color.WHITE);
-//         g2.draw(segment);
-//         g2.draw(segment2);
-        g2.drawArc((int)xLeft-radius/2-5, (int)yTop-radius/2, (int)radius/2-2, (int)radius/2-2, 0, 180);
-        g2.drawArc((int)xLeft+radius/2-5, (int)yTop-radius/2, (int)radius/2-2, (int)radius/2-2, 0, 180);
-        g2.drawArc((int)xLeft-radius/2, (int)yTop+radius/2-10, (int)radius, (int)radius/2, 180,180);
     }
 
     /**
@@ -125,6 +117,16 @@ public class UserObject
         return maxHp;
     }
 
+    public int getStamina()
+    {
+        return stamina;
+    }
+
+    public int getMaxStamina()
+    {
+        return maxStamina;
+    }
+
     /**
      * Returns level of user object.
      *
@@ -136,10 +138,11 @@ public class UserObject
 
     public void addXp(int dXp) {
         xp += dXp;
-        if((level < 15 && xp >= 1000) || (level < 20 && xp >= 10000)) {
+        if((level < 15 && xp >= 1000) || (level < 20 && xp >= 5000)) {
             xp = 0;
             level++;
             maxHp += 1 + level / 4;
+            maxStamina += 90;
         }
     }
 
@@ -164,5 +167,24 @@ public class UserObject
      */
     public void changeMaxHp(double dMaxHp) {
         maxHp += dMaxHp;
+    }
+
+    public void changeStamina(int dStamina)
+    {
+        if(stamina > 0)
+            stamina += dStamina;
+        if(stamina > maxStamina)
+            stamina = maxStamina;
+        if(stamina < 0)
+            stamina = 0;
+    }
+    
+    /**
+     * Changes user's max stamina by an amount.
+     *
+     * @param dMaxStamina change in MaxStamina
+     */
+    public void changeMaxStamina(double dMaxStamina) {
+        maxStamina += dMaxStamina;
     }
 }
