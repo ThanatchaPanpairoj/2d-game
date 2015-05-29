@@ -58,10 +58,11 @@ public class ObjectsComponent extends JComponent
         lastShotAngle = 0;
 
         difficulty = 2147400000;
-        for(int i = 1; i <= 20; i++)
-            user.addXp(1000 * i);//sets the user level to max(for testing)
-        score = 300000;
-            
+        //         for(int i = 1; i <= 20; i++)
+        //             user.addXp(1000 * i);//sets the user level to max(for testing)
+        // 
+        //         score = 300000;
+
         //difficulty = 1000000000;
         //difficulty = 0;
 
@@ -222,6 +223,11 @@ public class ObjectsComponent extends JComponent
             g2.setPaint(new Color(210, 0, 0));
             g2.fill(hpBar);
             g2.draw(hpBar);
+            
+            Rectangle staminaBar = new Rectangle (25, 60, (int)(500 * (((double)user.getStamina()) / user.getMaxStamina())), 30);
+            g2.setPaint(Color.YELLOW);
+            g2.fill(staminaBar);
+            g2.draw(staminaBar);
 
             g2.setPaint(Color.BLACK);
             g2.setFont (new Font (Font.SANS_SERIF, Font.BOLD, 25));
@@ -229,6 +235,8 @@ public class ObjectsComponent extends JComponent
 
             g2.drawString("HP: " + user.getHp() + " / " + user.getMaxHp(), 30, 40);
             
+            g2.drawString("Stamina: " + user.getStamina() + " / " + user.getMaxStamina(), 30, 85);
+
             g2.drawString("Level: " + user.getLevel(), fWidth - 123, 40);
 
             DecimalFormat df = new DecimalFormat("00");
@@ -240,7 +248,7 @@ public class ObjectsComponent extends JComponent
                     g2.setColor(new Color(colorNum, colorNum, colorNum));
                 }
                 g2.drawString("WASD to move, F or hold mouse to shoot", fWidth / 2 - 225, fHeight / 2 - 70);
-                g2.drawString("V or hold SPACEBAR for quadruple speed", fWidth / 2 - 225, fHeight / 2 + 70);
+                g2.drawString("V or hold SPACEBAR for quadruple speed. Uses stamina.", fWidth / 2 - 285, fHeight / 2 + 70);
                 framesToDisplayInstructions--;
             }
         } catch (java.lang.ArrayIndexOutOfBoundsException ex) {
@@ -255,13 +263,15 @@ public class ObjectsComponent extends JComponent
      * @param dy change in y
      * @return void
      */
-    public void moveBy(double dx, double dy) {
+    public void moveBy(boolean isSpacebar, double dx, double dy) {
         double newX = user.getX() + dx;
         double newY = user.getY() + dy;
         if(newX <= getWidth() - 25 && newX >= 25) 
             user.moveBy(dx, 0);
         if(newY <= getHeight() - 25 && newY >= 25) 
             user.moveBy(0, dy);
+        if (isSpacebar)
+            user.changeStamina(-1);
     }
 
     /**
@@ -442,13 +452,13 @@ public class ObjectsComponent extends JComponent
                     while(!spawned) {
                         int bossNum = (int)(Math.random() * 3) + 1;
                         if(bossNum == 1 && !JL) {
-                            bosses.add(new JustinLiu(40 + score / 4000, fWidth, fHeight));
+                            bosses.add(new JustinLiu(40 + score / 5000, fWidth, fHeight));
                             spawned = true;
                         } else if(bossNum == 2 && !TP) {
-                            bosses.add(new ThanatchaPanpairoj(40 + score / 4000, fWidth, fHeight));
+                            bosses.add(new ThanatchaPanpairoj(40 + score / 5000, fWidth, fHeight));
                             spawned = true;
                         } else if(bossNum == 3 && !J) {
-                            bosses.add(new JackWeng(40 + score / 4000, fWidth, fHeight));
+                            bosses.add(new JackWeng(40 + score / 5000, fWidth, fHeight));
                             spawned = true;
                         }
                     }
@@ -458,8 +468,14 @@ public class ObjectsComponent extends JComponent
             }
         }
     }
-    
-    public boolean isGame() {
+
+    public boolean isGame ()
+    {
         return game;
+    }
+    
+    public int getUserStamina()
+    {
+        return user.getStamina();
     }
 }
