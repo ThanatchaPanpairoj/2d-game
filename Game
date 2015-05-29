@@ -77,26 +77,26 @@ public class Game
                 mouseY = MouseInfo.getPointerInfo().getLocation().getY() - frame.getLocation().getY() - 25;
 
                 int speedUp = 1;
-                if(space || autospeed)
+                if((space || autospeed) && component.getUserStamina() > 0)
                     speedUp = 4;
 
                 if (right && up && !left)
-                    component.moveBy(diagonalMoveDistance * speedUp, -diagonalMoveDistance * speedUp);
+                    component.moveBy(space, diagonalMoveDistance * speedUp, -diagonalMoveDistance * speedUp);
                 else if (right && down && !left)
-                    component.moveBy(diagonalMoveDistance * speedUp, diagonalMoveDistance * speedUp);
+                    component.moveBy(space, diagonalMoveDistance * speedUp, diagonalMoveDistance * speedUp);
                 else if (left && up && !right)
-                    component.moveBy(-diagonalMoveDistance * speedUp, -diagonalMoveDistance * speedUp);
+                    component.moveBy(space, -diagonalMoveDistance * speedUp, -diagonalMoveDistance * speedUp);
                 else if (left && down && !right)
-                    component.moveBy(-diagonalMoveDistance * speedUp, diagonalMoveDistance * speedUp);
+                    component.moveBy(space, -diagonalMoveDistance * speedUp, diagonalMoveDistance * speedUp);
                 else {
                     if (right)
-                        component.moveBy(7 * speedUp, 0);
+                        component.moveBy(space, 7 * speedUp, 0);
                     if (left)
-                        component.moveBy(-7 * speedUp, 0);
+                        component.moveBy(space, -7 * speedUp, 0);
                     if (up)
-                        component.moveBy(0, -7 * speedUp);
+                        component.moveBy(space, 0, -7 * speedUp);
                     if (down)
-                        component.moveBy(0, 7 * speedUp);
+                        component.moveBy(space, 0, 7 * speedUp);
                 }
 
                 if(firing || autofire)
