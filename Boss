@@ -1,10 +1,10 @@
 import java.awt.Graphics2D;
 
 /**
- * Write a description of interface Boss here.
+ * Contains the common methods of each type of boss. Allows for an ArrayList<Boss> in GameComponent.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Thanatcha Panpairoj) 
+ * @version (5/27/15)
  */
 public interface Boss
 {
@@ -12,9 +12,17 @@ public interface Boss
     
     void move();
     
+    void move2();
+    
+    void moveBy(double dx, double dy);
+    
     double getX();
     
     double getY();
+    
+    double getXSpeed();
+    
+    double getYSpeed();
     
     void changeHp(int dHp);
     
