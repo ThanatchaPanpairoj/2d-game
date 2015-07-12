@@ -3,22 +3,32 @@ import java.awt.Graphics2D;
 import java.awt.Font;
 
 /**
- * Write a description of class JustinLiu here.
+ * Creates the Justin Liu boss that can spawn. Has a unique shooting pattern in GameComponent.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Thanatcha Panpairoj) 
+ * @version (6/6/15)
  */
 public class JustinLiu extends EnemyObject implements Boss
 {
-    private String name;
-
+    /**
+     * Initializes the boss object with its hp and dimensions.
+     *
+     * @param hp       the hit points of the boss.
+     * @param fWidth   the width of the frame.
+     * @param fHeight  the height of the frame.
+     */
     public JustinLiu(int hp, int fWidth, int fHeight) {
-        super(100, fWidth, fHeight, (int)(Math.random() * fWidth), (int)(Math.random() * fHeight), new Color((float)Math.random(), (float)Math.random(), (float)Math.random()), 3);
-        name = "Justin Liu";
+        super("Justin Liu", 100, fWidth, fHeight, (int)(Math.random() * fWidth), (int)(Math.random() * fHeight), new Color((float)Math.random(), (float)Math.random(), (float)Math.random()), 5);
         changeMaxHp(hp);
         changeHp(hp);
     }
 
+    /**
+     * Draws the boss. Overrides the draw method from EnemyObject to create different names for every boss.
+     * 
+     * @param g2 the graphics context
+     * @return   void
+     */
     public void draw(Graphics2D g2) {
         super.draw(g2);
 
@@ -27,22 +37,10 @@ public class JustinLiu extends EnemyObject implements Boss
 
         g2.setColor(Color.BLACK);
         g2.setFont (new Font (Font.SANS_SERIF, Font.BOLD, 25));
-        
+
         int x = (int)super.getX();
         int y = (int)super.getY();
-        g2.drawString("Justin Liu", x + 15, y + 85);
-        g2.drawString("" + super.getHp(), x + 65, y + 135);
-    }
-
-    public double getX() {
-        return super.getCurrentX();
-    }
-
-    public double getY() {
-        return super.getCurrentY();
-    }
-
-    public String getName() {
-        return name;
+        g2.drawString("Justin Liu", x - 60, y + 10);
+        g2.drawString("" + super.getHp(), x - 10, y + 60);
     }
 }
