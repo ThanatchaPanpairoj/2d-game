@@ -10,8 +10,8 @@ PURPOSE OF PROJECT: fun and learning
 
 VERSION or DATE: 7/21/15
 
-HOW TO START THIS PROJECT: clone this repo and then find it in explorer, then double-click 'package'
+HOW TO START THIS PROJECT: clone this repo and find it in explorer, then double-click 'package'
 
 AUTHORS: Thanatcha Panpairoj, Justin Liu, Jack Weng
 
-USER INSTRUCTIONS: clone this repo and then find it in explorer, then double-click 'package'
+USER INSTRUCTIONS: clone this repo and find it in explorer, then double-click 'package'
