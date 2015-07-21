@@ -14,4 +14,4 @@ HOW TO START THIS PROJECT: clone this repo and find it in explorer, then double-
 
 AUTHORS: Thanatcha Panpairoj, Justin Liu, Jack Weng
 
-USER INSTRUCTIONS: clone this repo and find it in explorer, then double-click 'package'
+USER INSTRUCTIONS: clone this repo and find it in explorer, then double-click the .jar file named 'Start Game'
