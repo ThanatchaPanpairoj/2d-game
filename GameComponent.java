@@ -332,13 +332,25 @@ public class GameComponent extends JComponent
 
             if(game && (closestE != null || closestB != null))
                 if(shortestEnemyDistance < shortestBossDistance) {
-                    double multiplier = shortestEnemyDistance / (15 + user.getLevel() * 1.5);
-                    int nextDistance = (int)Math.sqrt(Math.pow(closestE.getX() + closestE.getXSpeed() - user.getX(), 2) + Math.pow(closestE.getY() + closestE.getYSpeed() - user.getY(), 2));
-                    if(nextDistance > shortestEnemyDistance)
-                        multiplier *= 1.15;
-                    else
-                        multiplier *= 0.85;
-                    userShoot(closestE.getX() + multiplier * closestE.getXSpeed(), closestE.getY() + multiplier * closestE.getYSpeed());
+                    //                     double multiplier = shortestEnemyDistance / (15 + user.getLevel() * 1.5);
+                    //                     int nextDistance = (int)Math.sqrt(Math.pow(closestE.getX() + closestE.getXSpeed() - user.getX(), 2) + Math.pow(closestE.getY() + closestE.getYSpeed() - user.getY(), 2));
+                    //                     if(nextDistance > shortestEnemyDistance)
+                    //                         multiplier *= 1.15;
+                    //                     else
+                    //                         multiplier *= 0.85;
+                    //                     userShoot(closestE.getX() + multiplier * closestE.getXSpeed(), closestE.getY() + multiplier * closestE.getYSpeed());
+                    double userProjectileSpeed = (15 + user.getLevel() * 1.5);
+                    double enemyDistance = Math.sqrt(Math.pow(closestE.getX() - user.getX(), 2) + Math.pow(closestE.getY() - user.getY(), 2));
+                    for(int t = 0; t < 500; t++) {
+                        double userProjectileDistance =  t * userProjectileSpeed;
+                        double enemyX = closestE.getX() + t * closestE.getXSpeed();
+                        double ememyY = closestE.getY() + t * closestE.getYSpeed();
+                        if(Math.abs(userProjectileDistance - Math.sqrt(Math.pow(enemyX - user.getX(), 2) + Math.pow(ememyY - user.getY(), 2))) < 25) {
+                            //System.out.println(userProjectileDistance + "    " + Math.sqrt(Math.pow(enemyX - user.getX(), 2) + Math.pow(ememyY - user.getY(), 2)));
+                            userShoot(enemyX, ememyY);
+                            break;
+                        }
+                    }
                 } else if (closestB != null){
                     double multiplier = shortestBossDistance / (15 + user.getLevel() * 1.5);
                     int nextDistance = (int)Math.sqrt(Math.pow(closestB.getX() + closestB.getXSpeed() - user.getX(), 2) + Math.pow(closestB.getY() + closestB.getYSpeed() - user.getY(), 2));
@@ -961,12 +973,12 @@ public class GameComponent extends JComponent
             hint = "The blue bar represnts the xp needed to get to the next level.";
         else if (hintNumber == 7)
             hint = "You can safely hide inside the 'points' boss.";
-//         startingDifficulty = 2147400000;
-//         for(int i = 1; i < 20; i++)
-//             user.addXp(500000);//sets the user level to max(for testing)
-//         user.changeHp(200);
-//         user.changeStamina(10000);
-//         score = 100000;
+        //         startingDifficulty = 2147400000;
+        //         for(int i = 1; i < 20; i++)
+        //             user.addXp(500000);//sets the user level to max(for testing)
+        //         user.changeHp(200);
+        //         user.changeStamina(10000);
+        //         score = 100000;
         // 
         //         startingDifficulty = 1000000000;
 

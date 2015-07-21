@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=hp\ fWidth\ fHeight
+comment0.target=JackWeng(int,\ int,\ int)
+comment0.text=\r\n\ Initializes\ the\ boss\ object\ with\ its\ hp\ and\ dimensions.\r\n\r\n\ @param\ hp\ \ \ \ \ \ \ the\ hit\ points\ of\ the\ boss.\r\n\ @param\ fWidth\ \ \ the\ width\ of\ the\ frame.\r\n\ @param\ fHeight\ \ the\ height\ of\ the\ frame.\r\n
+comment1.params=g2
+comment1.target=void\ draw(java.awt.Graphics2D)
+comment1.text=\r\n\ Draws\ the\ boss.\ Overrides\ the\ draw\ method\ from\ EnemyObject\ to\ create\ different\ names\ for\ every\ boss.\r\n\ \r\n\ @param\ g2\ the\ graphics\ context\r\n\ @return\ \ \ void\r\n
+numComments=2

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=frameWidth\ frameHeight
+comment0.target=GridComponent(int,\ int)
+comment0.text=\r\n\ Initializes\ grid.\r\n\r\n\ @param\ frameWidth\ \ \ the\ width\ of\ the\ frame.\r\n\ @param\ frameHeight\ \ the\ height\ of\ the\ frame.\r\n\ \r\n
+comment1.params=g
+comment1.target=void\ paintComponent(java.awt.Graphics)
+comment1.text=\r\n\ Draws\ the\ grid.\ Each\ box\ is\ 100x100\ pixels.\ Number\ of\ lines\ drawn\ depends\ on\ the\ frame\ width\ and\ frame\ height.\ \r\n\r\n\ @param\ \ g\ \ Graphics\r\n\ @return\ \ \ \ void\r\n
+comment2.params=dx\ dy
+comment2.target=void\ shift(double,\ double)
+comment3.params=
+comment3.target=void\ reset()
+comment4.params=
+comment4.target=double\ getXShift()
+comment5.params=
+comment5.target=double\ getYShift()
+numComments=6

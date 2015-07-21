@@ -11,8 +11,8 @@ import java.awt.Color;
  */
 public class UserObject 
 {
-    private double xLeft;
-    private double yTop;
+    private double currentX;
+    private double currentY;
     private Color color;
     private int hp, maxHp, stamina, maxStamina, radius, level, xp;
 
@@ -31,8 +31,8 @@ public class UserObject
         hp = maxHp;
         stamina = 180;
         maxStamina = 180;
-        xLeft = x;
-        yTop = y;
+        currentX = x;
+        currentY = y;
         level = 1;
         this.color = color;
     }
@@ -44,7 +44,7 @@ public class UserObject
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double circle = new Ellipse2D.Double(xLeft - 25, yTop - 25, 2 * radius, 2 * radius);
+        Ellipse2D.Double circle = new Ellipse2D.Double(currentX - 25, currentY - 25, 2 * radius, 2 * radius);
         //could be any object, doesn't have to be an ellipse
         g2.setColor(color);
         g2.draw(circle);
@@ -61,8 +61,8 @@ public class UserObject
      * @return void
      */
     public void moveTo(double x, double y) {
-        xLeft = x;
-        yTop = y;
+        currentX = x;
+        currentY = y;
     }
 
     /**
@@ -73,26 +73,26 @@ public class UserObject
      * @return void
      */
     public void moveBy(double dx, double dy) {
-        xLeft += dx;
-        yTop += dy;
+        currentX += dx;
+        currentY += dy;
     }
 
     /**
      * Returns x-coordinate of user object.
      *
-     * @return xLeft
+     * @return currentX
      */
     public double getX() {
-        return xLeft;
+        return currentX;
     }
 
     /**
      * Returns y-coordinate of user object.
      *
-     * @return yTop
+     * @return currentY
      */
     public double getY() {
-        return yTop;
+        return currentY;
     }
 
     /**

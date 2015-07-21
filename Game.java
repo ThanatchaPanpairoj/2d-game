@@ -23,6 +23,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Font;
 
 import java.net.URL;
 
@@ -333,6 +334,27 @@ public class Game extends JFrame
             public void mouseExited(MouseEvent event) {}
         }
 
+        class ButtonMouseListener implements MouseListener
+        {
+            public void mousePressed(MouseEvent event){}
+
+            public void mouseReleased(MouseEvent event) {}
+
+            public void mouseClicked(MouseEvent event) {}
+
+            public void mouseEntered(MouseEvent event) {
+                JButton b = (JButton)event.getComponent();
+                b.setFont(new Font(event.getComponent().getFont().getFamily(), Font.BOLD, 17));
+                b.setBounds((int)b.getLocation().getX() - 10, (int)b.getLocation().getY() - 10, 220, 100);
+            }
+
+            public void mouseExited(MouseEvent event) {
+                JButton b = (JButton)event.getComponent();
+                b.setFont(new Font(event.getComponent().getFont().getFamily(), Font.BOLD, 14));
+                b.setBounds((int)b.getLocation().getX() + 10, (int)b.getLocation().getY() + 10, 200, 80);
+            }
+        }
+
         class ScrollListener implements MouseWheelListener
         {
             /**
@@ -412,7 +434,7 @@ public class Game extends JFrame
                 hardButton.setVisible(true);
             }
         }
-        
+
         class AboutListener implements ActionListener
         {
             /**
@@ -513,26 +535,34 @@ public class Game extends JFrame
         t.start();
 
         ActionListener sListener = new StartGameListener();
+        startButton.setFont(new Font(startButton.getFont().getFamily(), Font.BOLD, 14));
+        startButton.addMouseListener(new ButtonMouseListener());
         startButton.addActionListener(sListener);
         startButton.setBounds(width / 2 - 100, height / 2 - 200, 200, 80);
         startButton.setVisible(true);
 
         ActionListener oListener = new OptionsListener();
+        optionsButton.setFont(new Font(startButton.getFont().getFamily(), Font.BOLD, 14));
+        optionsButton.addMouseListener(new ButtonMouseListener());
         optionsButton.addActionListener(oListener);
         optionsButton.setBounds(width / 2 - 100, height / 2 - 100, 200, 80);
         optionsButton.setVisible(true);
-        
+
         ActionListener aListener = new AboutListener();
+        aboutButton.setFont(new Font(startButton.getFont().getFamily(), Font.BOLD, 14));
+        aboutButton.addMouseListener(new ButtonMouseListener());
         aboutButton.addActionListener(aListener);
         aboutButton.setBounds(width / 2 - 100, height / 2, 200, 80);
         aboutButton.setVisible(true);
-        
+
         ActionListener mBTMListener = new BackToMenuListener();
         menuBackToMenuButton.addActionListener(mBTMListener);
         menuBackToMenuButton.setBounds(50, 50, 150, 40);
         menuBackToMenuButton.setVisible(false);
 
         ActionListener eListener = new ExitGameListener();
+        exitButton.setFont(new Font(startButton.getFont().getFamily(), Font.BOLD, 14));
+        exitButton.addMouseListener(new ButtonMouseListener());
         exitButton.addActionListener(eListener);
         exitButton.setBounds(width / 2 - 100, height / 2 + 100, 200, 80);
         exitButton.setVisible(true);

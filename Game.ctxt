@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\r\n\ Main\ method\ that\ starts\ the\ game.\ Sets\ up\ the\ JFrame,\ GameComponent,\ GridComponent,\ buttons,\ and\ listeners.\r\n\ Sets\ the\ size\ to\ fullscreen\ and\ the\ cursor\ to\ a\ crosshair.\r\n\ Starts\ a\ timer\ with\ a\ 1000/60\ millisecond\ delay.\ The\ timer\ calls\ the\ ActionPerformed\ method\ every\ 1000\ /\ 60\ of\ a\ second.\r\n\ This\ updates\ and\ repaints\ the\ GameComponent\ which\ contains\ all\ the\ objects\ each\ time.\r\n\ Checks\ to\ see\ if\ the\ game\ has\ ended\ and\ offers\ to\ restart.\ Can\ also\ pause\ the\ game.\r\n\ \r\n\ @param\ \ args\ \ default\ parameter\ for\ main\ method\r\n\ @return\ \ \ \ \ \ \ void\r\n
+comment1.params=
+comment1.target=Game()
+numComments=2

@@ -21,7 +21,7 @@ import java.io.IOException;
 public class EnemyObject extends UserObject
 {
     private double currentX, currentY, finalX, finalY, xSpeed, ySpeed, angle, speed;
-    private int fWidth, fHeight, userMode;
+    private int fWidth, fHeight;
     private Color color;
     private Image skullImage;
     private String name;
@@ -44,7 +44,6 @@ public class EnemyObject extends UserObject
 
         this.name = name;
 
-        this.userMode = userMode;
         this.color = color;
 
         this.fWidth = fWidth;
@@ -68,12 +67,12 @@ public class EnemyObject extends UserObject
         else
             ySpeed = -Math.sin(angle) * speed;
 
-//         if(super.getMaxHp() == 1)
-//             try {
-//                 skullImage = ImageIO.read(Game.class.getResource("skull.png"));
-//             } catch (java.io.IOException e) {
-//                 System.err.println("Could not find cursor image");
-//             }
+        //         if(super.getMaxHp() == 1)
+        //             try {
+        //                 skullImage = ImageIO.read(Game.class.getResource("skull.png"));
+        //             } catch (java.io.IOException e) {
+        //                 System.err.println("Could not find cursor image");
+        //             }
     }
 
     /**
@@ -218,19 +217,27 @@ public class EnemyObject extends UserObject
     public String getName() {
         return name;
     }
-    
+
     public double getX() {
         return currentX;
     }
-    
+
     public double getY() {
         return currentY;
     }
-    
+
+    public double getFinalX() {
+        return finalX;
+    }
+
+    public double getFinalY() {
+        return finalY;
+    }
+
     public double getXSpeed() {
         return xSpeed;
     }
-    
+
     public double getYSpeed() {
         return ySpeed;
     }
