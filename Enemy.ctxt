@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=name\ radius\ fWidth\ fHeight\ x\ y\ color\ speed
-comment0.target=EnemyObject(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ java.awt.Color,\ double)
+comment0.target=Enemy(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ java.awt.Color,\ double)
 comment0.text=\r\n\ Initializes\ the\ enemy\ object\ with\ its\ name,\ dimensions,\ location,\ color,\ and\ speed.\r\n\r\n\ @param\ name\ \ \ \ \ the\ name\ of\ the\ enemy.\r\n\ @param\ radius\ \ \ the\ radius\ of\ the\ enemy.\r\n\ @param\ fWidth\ \ \ the\ width\ of\ the\ frame.\r\n\ @param\ fHeight\ \ the\ height\ of\ the\ frame.\r\n\ @param\ x\ \ \ \ \ \ \ \ the\ x-coordinate\ of\ the\ enemy.\r\n\ @param\ y\ \ \ \ \ \ \ \ the\ y-coordinate\ of\ the\ enemy.\r\n\ @param\ color\ \ \ \ the\ color\ of\ the\ enemy.\r\n\ @param\ speed\ \ \ \ the\ speed\ of\ the\ enemy.\r\n\ \r\n
 comment1.params=g2
 comment1.target=void\ draw(java.awt.Graphics2D)

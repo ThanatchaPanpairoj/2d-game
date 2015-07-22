@@ -9,7 +9,7 @@ import java.awt.Color;
  * @author (Thanatcha Panpairoj, Jack Weng)
  * @version (6/4/15)
  */
-public class UserObject 
+public class User
 {
     private double currentX;
     private double currentY;
@@ -24,7 +24,7 @@ public class UserObject
     @param y the y coordinate of the center
     @param color the color of the user object
      */
-    public UserObject(int radius, int x, int y, Color color, int maxHp)
+    public User(int radius, int x, int y, Color color, int maxHp)
     {
         this.radius = radius;
         this.maxHp = maxHp;

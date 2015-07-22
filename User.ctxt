@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=radius\ x\ y\ color\ maxHp
-comment0.target=UserObject(int,\ int,\ int,\ java.awt.Color,\ int)
+comment0.target=User(int,\ int,\ int,\ java.awt.Color,\ int)
 comment0.text=\r\n\ \ \ \ Constructs\ an\ user\ object\ with\ a\ given\ center.\r\n\r\n\ \ \ \ @param\ radius\ the\ radius\ of\ the\ user\ object\r\n\ \ \ \ @param\ x\ the\ x\ coordinate\ of\ the\ center\r\n\ \ \ \ @param\ y\ the\ y\ coordinate\ of\ the\ center\r\n\ \ \ \ @param\ color\ the\ color\ of\ the\ user\ object\r\n
 comment1.params=g2
 comment1.target=void\ draw(java.awt.Graphics2D)

@@ -40,7 +40,7 @@ import java.io.IOException;
 
 public class Game extends JFrame
 {
-    private static boolean left, right, up, down, firing, space, autofire, autospeed, pause, zeroScoreMessageDisplayed, menu, options, about;
+    private static boolean left, right, up, down, firing, space, autofire, autospeed, pause, zeroScoreMessageDisplayed, menu;
     private static double diagonalMoveDistance = 7 / Math.sqrt(2), mouseX, mouseY;
     private static Image cursorImage;
 
@@ -81,8 +81,6 @@ public class Game extends JFrame
         pause = false;
         zeroScoreMessageDisplayed = false;
         menu = true;
-        options = false;
-        about = false;
 
         //         frame.setUndecorated(true);
         //         frame.setShape(new Ellipse2D.Double(0,0, 800, 800));//circle frame?
@@ -422,8 +420,6 @@ public class Game extends JFrame
              * @return        void
              */
             public void actionPerformed(ActionEvent event) {
-                //options = true;
-                //menu = false;
                 startButton.setVisible(false);
                 optionsButton.setVisible(false);
                 aboutButton.setVisible(false);
@@ -444,8 +440,6 @@ public class Game extends JFrame
              * @return        void
              */
             public void actionPerformed(ActionEvent event) {
-                //about = true;
-                //menu = false;
                 startButton.setVisible(false);
                 optionsButton.setVisible(false);
                 aboutButton.setVisible(false);
@@ -473,8 +467,6 @@ public class Game extends JFrame
                 autospeed = false;
                 pause = false;
                 zeroScoreMessageDisplayed = false;
-                //options = false;
-                //about = false;
                 component.restart();
                 gridComponent.reset();
             }
@@ -490,8 +482,6 @@ public class Game extends JFrame
              */
             public void actionPerformed(ActionEvent event) {
                 menu = true;
-                //options = false;
-                //about = false;
                 component.setVisible(false);
                 restartButton.setVisible(false);
                 gameBackToMenuButton.setVisible(false);

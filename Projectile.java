@@ -10,7 +10,7 @@ import java.awt.Color;
  * @author (Thanatcha Panpairoj) 
  * @version (6/4/15)
  */
-public class ProjectileObject
+public class Projectile
 {
     private double currentX, currentY, finalX, finalY, xSpeed, ySpeed, angle, dAmplitude, maxRange, displacement;
     private int damage, radius, amplitude, amplitudeClock = 0;
@@ -30,7 +30,7 @@ public class ProjectileObject
      *@param endingY the y coordinate of the mouse
      *@param speed the speed of the projectile
      */
-    public ProjectileObject(int radius, int damage, Color color, double startingX, double startingY, double endingX, double endingY, double speed) {
+    public Projectile(int radius, int damage, Color color, double startingX, double startingY, double endingX, double endingY, double speed) {
         this.damage = damage;
         this.radius = radius;
         this.color = color;
@@ -67,7 +67,7 @@ public class ProjectileObject
      *@param angle the angle of the projectile
      *@param speed the speed of the projectile
      */
-    public ProjectileObject(int radius, int damage, Color color, double startingX, double startingY, double angle, double speed) {
+    public Projectile(int radius, int damage, Color color, double startingX, double startingY, double angle, double speed) {
         this.damage = damage;
         this.radius = radius;
         this.color = color;
@@ -98,7 +98,7 @@ public class ProjectileObject
      *@param angle the angle of the projectile
      *@param speed the speed of the projectile
      */
-    public ProjectileObject(double maxRange, boolean limitedRange, int radius, int damage, Color color, double startingX, double startingY, double angle, double speed) {
+    public Projectile(double maxRange, boolean limitedRange, int radius, int damage, Color color, double startingX, double startingY, double angle, double speed) {
         this.damage = damage;
         this.radius = radius;
         this.color = color;
@@ -130,7 +130,7 @@ public class ProjectileObject
      *@param endingY the y coordinate of the mouse
      *@param speed the speed of the projectile
      */
-    public ProjectileObject(int amplitude, int radius, int damage, Color color, double startingX, double startingY, double endingX, double endingY, double speed) {
+    public Projectile(int amplitude, int radius, int damage, Color color, double startingX, double startingY, double endingX, double endingY, double speed) {
         this.amplitude = amplitude;
         this.damage = damage;
         this.radius = radius;
@@ -171,7 +171,7 @@ public class ProjectileObject
      *@param endingY the y coordinate of the mouse
      *@param speed the speed of the projectile
      */
-    public ProjectileObject(boolean limitedRange, double maxRange, int radius, int damage, Color color, double startingX, double startingY, double endingX, double endingY, double speed) {
+    public Projectile(boolean limitedRange, double maxRange, int radius, int damage, Color color, double startingX, double startingY, double endingX, double endingY, double speed) {
         this.damage = damage;
         this.radius = radius;
         this.color = color;

@@ -8,7 +8,7 @@ import java.awt.Font;
  * @author (Thanatcha Panpairoj) 
  * @version (6/2/15)
  */
-public class MsJaime extends EnemyObject implements Boss
+public class MsJaime extends Enemy implements Boss
 {
     /**
      * Initializes the boss object with its hp and dimensions.

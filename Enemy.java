@@ -18,7 +18,7 @@ import java.io.IOException;
  * @author (Thanatcha Panpairoj, Jack Weng) 
  * @version (6/6/15)
  */
-public class EnemyObject extends UserObject
+public class Enemy extends User
 {
     private double currentX, currentY, finalX, finalY, xSpeed, ySpeed, angle, speed;
     private int fWidth, fHeight;
@@ -39,7 +39,7 @@ public class EnemyObject extends UserObject
      * @param speed    the speed of the enemy.
      * 
      */
-    public EnemyObject(String name, int radius, int fWidth, int fHeight, int x, int y, Color color, double speed) {
+    public Enemy(String name, int radius, int fWidth, int fHeight, int x, int y, Color color, double speed) {
         super(radius, x, y, color, 1);
 
         this.name = name;
