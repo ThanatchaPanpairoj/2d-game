@@ -21,7 +21,7 @@ Jay Wang (gnarfardjr)
 ##USER INSTRUCTIONS: 
 Click on 'Start Game' and then 'view raw', then you can either save the game or run it.
 <br>
-Please refer to EXHIBIT A and EXHIBIT B
+Please refer to EXHIBIT A and EXHIBIT B below.
 <br>
 EXHIBIT A:
 ![ScreenShot](http://imgur.com/HAqCg6a.png)
