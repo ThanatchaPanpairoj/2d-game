@@ -16,7 +16,7 @@ Clone this repo and find it in explorer, then double-click 'package' and BlueJ w
 Thanatcha Panpairoj, Justin Liu, Jack Weng
 
 ##CONTRIBUTORS:
-Jay Wang
+Jay Wang (gnarfardjr)
 
 ##USER INSTRUCTIONS: 
 Click on 'Start Game' and then 'view raw', then you can either save the game or run it.
