@@ -24,9 +24,11 @@ Click on 'Start Game' and then 'view raw', then you can either save the game or 
 Please refer to EXHIBIT A and EXHIBIT B below.
 <br>
 EXHIBIT A:
+<br>
 ![ScreenShot](http://imgur.com/HAqCg6a.png)
 <br>
 EXHIBIT B:
+<br>
 ![Screenshot](http://imgur.com/1CzbUdz.png)
 
 
