@@ -23,7 +23,7 @@ Click on 'Start Game' and then 'view raw', then you can either save the game or 
 Refer to EXHIBIT A
 
 EXHIBIT A:
-![ScreenShot](http://imgur.com/HAqCg6a )
+![ScreenShot](http://imgur.com/HAqCg6a)
 
 
 ##CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS:
