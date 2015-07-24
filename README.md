@@ -13,21 +13,23 @@ fun and learning
 Clone this repo and find it in explorer, then double-click 'package' and BlueJ will open
 
 ##AUTHORS: 
-Thanatcha Panpairoj, Justin Liu, Jack Weng
+Thanatcha Panpairoj, Justin Liu(justliu8), Jack Weng(xhxhil)
 
 ##CONTRIBUTORS:
 Jay Wang (gnarfardjr)
 
 ##USER INSTRUCTIONS: 
-Click on 'Start Game' and then 'view raw', then you can either save the game or run it.
+Click this download link to download the *.jar* file: [download](StartGame.jar)
+
+If the download link doesn't work, click on *'Start Game'* and then *'view raw'*. You can either save the game or run it.
 <br>
-Please refer to EXHIBIT A and EXHIBIT B below.
+Please refer to *EXHIBIT A* and *EXHIBIT B* below.
 <br>
-EXHIBIT A:
+*EXHIBIT A*:
 <br>
 ![ScreenShot](http://imgur.com/HAqCg6a.png)
 <br>
-EXHIBIT B:
+*EXHIBIT B*:
 <br>
 ![Screenshot](http://imgur.com/1CzbUdz.png)
 
