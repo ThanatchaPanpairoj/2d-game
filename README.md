@@ -19,7 +19,7 @@ Thanatcha Panpairoj, Justin Liu(justliu8), Jack Weng(xhxhil)
 Jay Wang (gnarfardjr)
 
 ##USER INSTRUCTIONS: 
-Click this download link to download the *.jar* file: [download](StartGame.jar)
+Click this download link to download the *.jar* file: [download](StartGame.jar?raw=true)
 
 If the download link doesn't work, click on *'Start Game'* and then *'view raw'*. You can either save the game or run it.
 <br>
