@@ -34,7 +34,10 @@ By playing (clicking 'Start Game' or otherwise) JavaArcadeGame (henceforth refer
 
 ---
 
-**DOWNLOAD: [I ACCEPT THE TERMS AND CONDITIONS IN "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"](StartGame.jar?raw=true)**
+######**DOWNLOAD: [I ACCEPT THE TERMS AND CONDITIONS IN "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"](StartGame.jar?raw=true)**
+
+---
+
 <br>
 <br>
 If the download link doesn't work, click on *'Start Game'* and then *'view raw'*. You can either save the game or run it. Please refer to *EXHIBIT A* and *EXHIBIT B* below.
