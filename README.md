@@ -13,7 +13,7 @@ fun and learning
 This is for editing the code. If you want to play the game, refer to 'USER INSTRUCTIONS' further down the page.
 <ol>
 <li>Clone this repo</li>
-<li>find it in explorer</li>
+<li>Find it in explorer</li>
 <li>Double-click 'package'</li>
 <li>BlueJ will open</li>
 </ol>
