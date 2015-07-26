@@ -34,7 +34,7 @@ By playing (clicking 'Start Game' or otherwise) JavaArcadeGame (henceforth refer
 
 ---
 
-#####**DOWNLOAD: [I ACCEPT THE TERMS AND CONDITIONS IN "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"](StartGame.jar?raw=true)**
+####**DOWNLOAD: [I ACCEPT THE TERMS AND CONDITIONS IN "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"](StartGame.jar?raw=true)**
 
 ---
 
