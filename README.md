@@ -11,10 +11,12 @@ fun and learning
 
 ##HOW TO START THIS PROJECT: 
 This is for editing the code. If you want to play the game, refer to 'USER INSTRUCTIONS' further down the page.
-1. Clone this repo 
-2. find it in explorer 
-3. Double-click 'package' 
-4. BlueJ will open
+<ol>
+<li>Clone this repo</li>
+<li>find it in explorer</li>
+<li>Double-click 'package'</li>
+<li>BlueJ will open</li>
+</ol>
 
 ##AUTHORS: 
 Thanatcha Panpairoj, Justin Liu(justliu8), Jack Weng(xhxhil)
