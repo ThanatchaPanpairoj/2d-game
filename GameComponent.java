@@ -454,7 +454,7 @@ public class GameComponent extends JComponent
             g2.draw(hpBar);
 
             //Rectangle staminaBar = new Rectangle(25, 60, (int)(600 * (((double)user.getStamina()) / user.getMaxStamina())), 30);
-            Rectangle staminaBar = new Rectangle(25, 46, (int)(600 * (((double)user.getStamina()) / user.getMaxStamina())), 4);
+            Rectangle staminaBar = new Rectangle(25, 46, (int)(600 * (((double)user.getStamina()) / user.getMaxStamina())), 6);
             g2.setPaint(new Color(255, 215, 0));
             g2.fill(staminaBar);
             g2.draw(staminaBar);
