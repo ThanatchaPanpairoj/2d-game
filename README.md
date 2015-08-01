@@ -40,7 +40,7 @@ By playing (clicking 'Start Game' or otherwise) 2d-game (henceforth referred to 
 ---
 
 <br>
-If the download link doesn't work, click on *'javagame.exe(windows)'* or *'StartGame.jar(others)'* and then *'view raw'*. You can either save the game or run it. Please refer to *EXHIBIT A* and *EXHIBIT B* below.
+If the download link doesn't work, click on *'StartGame.jar'* and then *'view raw'*. You can either save the game or run it. Please refer to *EXHIBIT A* and *EXHIBIT B* below.
 <br>
 <br>
 *EXHIBIT A*:
