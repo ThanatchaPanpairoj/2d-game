@@ -434,7 +434,7 @@ public class GameComponent extends JComponent
                 drawCenteredText(g2, hint, 270);
             }
 
-            paintStats(g2);
+            //paintStats(g2);
 
             if(userLevel != 20) {
                 Rectangle xpBar = new Rectangle(25, 11, (int)(600 * (((double)user.getXp()) / user.getMaxXp())), 3);
