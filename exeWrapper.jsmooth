@@ -7,11 +7,10 @@
 <JVMSearchPath>exepath</JVMSearchPath>
 <JVMSearchPath>jview</JVMSearchPath>
 <arguments></arguments>
-<classPath>..\Game.jar</classPath>
-<classPath>.</classPath>
+<classPath>src</classPath>
 <embeddedJar>false</embeddedJar>
 <executableName>Game.exe</executableName>
-<iconLocation>images\blue circle.jpg</iconLocation>
+<iconLocation>src\images\blue circle.jpg</iconLocation>
 <initialMemoryHeap>-1</initialMemoryHeap>
 <mainClassName>Game</mainClassName>
 <maximumMemoryHeap>-1</maximumMemoryHeap>
