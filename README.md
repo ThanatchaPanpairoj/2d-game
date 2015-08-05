@@ -17,6 +17,7 @@ Jay Wang (gnarfardjr)
 ####HOW TO START THIS PROJECT: 
 This is for editing the code. If you want to play the game, refer to 'USER INSTRUCTIONS' further down the page.
 <ol>
+<li>Make sure you have the latest version of Java</li>
 <li>Clone this repo</li>
 <li>Find it in explorer</li>
 <li>Open 'src' to get to the sorce</li>
@@ -25,6 +26,7 @@ This is for editing the code. If you want to play the game, refer to 'USER INSTR
 </ol>
 
 ####USER INSTRUCTIONS: 
+<li>Make sure you have the latest version of Java</li>
 <li>Click this download link to procede to download the *.jar* file: [CLICK HERE TO DOWNLOAD](https://github.com/ThanatchaPanpairoj/JavaArcadeGame#contract-between-game-adminsitrators-and-players)</li>
 <li>Read "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"</li>
 <li>Click I ACCEPT THE TERMS AND CONDITIONS IN "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"</li>
