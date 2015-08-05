@@ -112,7 +112,14 @@ public class Game extends JFrame
         final Toolkit toolkit = Toolkit.getDefaultToolkit();
 
         try {
-            cursorImage = ImageIO.read(Game.class.getResource("crosshair.png"));
+            cursorImage = ImageIO.read(Game.class.getResource("images/crosshair.png"));
+        } catch (java.io.IOException e) {
+            System.err.println("Could not find cursor image");
+        }
+
+        try {
+            Image icon = ImageIO.read(Game.class.getResource("images/blue circle.jpg"));
+            this.setIconImage(icon);
         } catch (java.io.IOException e) {
             System.err.println("Could not find cursor image");
         }
