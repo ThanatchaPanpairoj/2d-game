@@ -8,6 +8,7 @@ fun and learning
 
 ####AUTHORS: 
 Active: Thanatcha Panpairoj
+<br>
 Inactive: Justin Liu(justliu8), Jack Weng(xhxhil)
 
 ####CONTRIBUTORS:
