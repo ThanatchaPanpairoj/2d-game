@@ -14,7 +14,7 @@ Inactive: Justin Liu(justliu8), Jack Weng(xhxhil)
 ####CONTRIBUTORS:
 Jay Wang (gnarfardjr)
 
-###HOW TO START THIS PROJECT: 
+####HOW TO START THIS PROJECT: 
 This is for editing the code. If you want to play the game, refer to 'USER INSTRUCTIONS' further down the page.
 <ol>
 <li>Clone this repo</li>
@@ -24,7 +24,7 @@ This is for editing the code. If you want to play the game, refer to 'USER INSTR
 <li>BlueJ will open</li>
 </ol>
 
-###USER INSTRUCTIONS: 
+####USER INSTRUCTIONS: 
 <li>Click this download link to procede to download the *.jar* file: [CLICK HERE TO DOWNLOAD](https://github.com/ThanatchaPanpairoj/JavaArcadeGame#contract-between-game-adminsitrators-and-players)</li>
 <li>Read "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"</li>
 <li>Click I ACCEPT THE TERMS AND CONDITIONS IN "CONTRACT BETWEEN GAME ADMINSITRATORS AND PLAYERS"</li>
