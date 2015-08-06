@@ -5,10 +5,18 @@ import java.awt.Font;
 import java.awt.Rectangle;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import javax.swing.JComponent;
 
 import java.text.DecimalFormat;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+import java.io.PrintWriter;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.IOException;
 
 /**
  * Draws the game, which includes the user, enemies, bosses, and projectiles. This will be added onto the frame in the main method of the Game class.
@@ -20,10 +28,12 @@ public class GameComponent extends JComponent
 {
     private User user;
 
-    private boolean boosting, left, right, up, down, firing, autofire, game, newShotModeDisplayed, autoaim, automove;
+    private boolean boosting, left, right, up, down, firing, autofire, game, newShotModeDisplayed, autoaim, automove, scoreSaved;
     private int fWidth, fHeight, framesToDisplayInstructions, framesToDisplayShotMode, framesToDisplayNewShotMode, shotClock, enemyClock, previousTCount, score, startingDifficulty, difficulty, lastShotAngle, enemiesDestroyed, bossesDestroyed, shotsFired, shotsHit, shotMode;
     private double mouseX, mouseY, time;
+
     private String hint;
+    private GridComponent grid;
 
     private ArrayList<Projectile> userProjectiles;
     private ArrayList<Projectile> enemyProjectiles;
@@ -31,8 +41,6 @@ public class GameComponent extends JComponent
     private ArrayList<Boss> bosses;
     private ArrayList<Integer> enemyShotClock;
     private ArrayList<Integer> bossShotClock;
-
-    private GridComponent grid;
 
     /**
      * Initializes the game component. Sets the time to display the control instructions to 10 seconds (600 frames).
@@ -80,6 +88,7 @@ public class GameComponent extends JComponent
         game = true;
         autoaim = false;
         automove = false;
+        scoreSaved = false;
     }
 
     /**
@@ -432,6 +441,19 @@ public class GameComponent extends JComponent
 
                 g2.setFont (new Font (Font.SANS_SERIF, Font.BOLD, 20));
                 drawCenteredText(g2, hint, 270);
+
+                if(!scoreSaved) {
+                    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                    Calendar cal = Calendar.getInstance();
+                    try {
+                        PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("Game Scores.txt", true)));
+                        out.println("GAME: " + dateFormat.format(cal.getTime()) + "     SCORE: " + score);
+                        out.close();
+                        scoreSaved = true;
+                    } catch (IOException e) {
+                        System.err.println("Could not recore score");
+                    }
+                }
             }
 
             //paintStats(g2);
@@ -994,5 +1016,6 @@ public class GameComponent extends JComponent
         game = true;
         autoaim = false;
         automove = false;
+        scoreSaved = false;
     }
 }
