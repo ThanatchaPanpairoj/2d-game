@@ -8,6 +8,8 @@
 <JVMSearchPath>jview</JVMSearchPath>
 <arguments></arguments>
 <classPath>src</classPath>
+<classPath>Game.jar</classPath>
+<currentDirectory>src</currentDirectory>
 <embeddedJar>false</embeddedJar>
 <executableName>Game.exe</executableName>
 <iconLocation>src\images\blue circle.jpg</iconLocation>
